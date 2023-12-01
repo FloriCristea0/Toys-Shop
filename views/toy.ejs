@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= toy.title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <img src="/images/logo.png" alt="Logo" class="navbar-logo" />
+        <a href="/" class="navbar-item">Toys Universe</a>
+      </div>
+      <div class="navbar-right"></div>
+    </div>
+
+    <h1>Toy: <%= toy.title %></h1>
+    <div class="buttons">
+      <a href="/edit-toy/<%= toy.id %>"><button>Edit toy</button></a>
+      <form method="post" action="/delete-toy/<%= toy.id %>" onsubmit="return confirm('Are you sure you want to delete this toy?')">
+        <button type="submit" class="delete-button">Delete toy</button>
+      </form>
+    </div>
+
+    <h2>Details:</h2>
+    <div class="list-container">
+      <ul class="custom-list">
+        <li><strong>Price:</strong> <%= toy.price %> €</li>
+        <li><strong>Age:</strong> <%= toy.age %> years</li>
+        <li><strong>Date Added:</strong> <%= toy.dateAdded %></li>
+        <li><strong>Description:</strong> <%= toy.description %></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Category: <%= category.name %></title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <img src="/images/logo.png" alt="Logo" class="navbar-logo" />
+        <a href="/" class="navbar-item">Toys Universe</a>
+      </div>
+      <div class="navbar-right"></div>
+    </div>
+
+    <h1>Edit category: <%= category.name %></h1>
+    <div class="form-container">
+      <form action="/update-category/<%= category.id %>" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value="<%= category.name %>"
+            required
+          /><br />
+        </div>
+        <div class="buttons">
+          <button type="submit" value="Actualizați Categoria">
+            Update Category
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

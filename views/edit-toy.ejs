@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Edit Toy: <%= toy.title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/images/logo.png" type="image/png">
+</head>
+<body>
+      
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="/images/logo.png" alt="Logo" class="navbar-logo">
+            <a href="/" class="navbar-item">Toys Universe</a>
+        </div>
+        <div class="navbar-right"> 
+        </div>
+      </div>
+
+    <h1>Edit toy: <%= toy.title %></h1>
+    <div class="form-container">
+    <form method="post" action="/update-toy">
+        <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="<%= toy.title %>" required><br>
+        </div>
+
+        <div class="form-group">
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <% categories.forEach((category) => { %>
+                <option value="<%= category.id %>" <%= category.id == toy.category ? 'selected' : '' %>><%= category.name %></option>
+            <% }) %>
+        </select><br>
+        </div>
+
+        <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" value="<%= toy.price %>" required><br>
+        </div>
+
+        <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" value="<%= toy.age %>" required><br>
+        </div>
+
+        <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required><%= toy.description %></textarea><br>
+        </div>
+
+        <input type="hidden" name="id" value="<%= toy.id %>">
+        
+        <div class="buttons">
+        <button type="submit">Update toy</button
+        </div>
+    </form>
+</div>
+</body>
+</html>

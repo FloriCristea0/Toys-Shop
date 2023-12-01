@@ -1,0 +1,26 @@
+{
+  "name": "toys-shop",
+  "version": "1.0.0",
+  "description": "Online store for toys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FloriCristea0/Toys-Shop.git"
+  },
+  "author": "Florinela Cristea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FloriCristea0/Toys-Shop/issues"
+  },
+  "homepage": "https://github.com/FloriCristea0/Toys-Shop#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mongoose": "^8.0.2"
+  }
+}

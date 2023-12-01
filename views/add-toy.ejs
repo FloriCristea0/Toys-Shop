@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Toy</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <img src="/images/logo.png" alt="Logo" class="navbar-logo" />
+        <a href="/" class="navbar-item">Toys Universe</a>
+      </div>
+      <div class="navbar-right"></div>
+    </div>
+
+    <h1>Add toy</h1>
+    <div class="form-container">
+      <form method="POST" action="/add-toy">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <select id="category" name="category" required>
+            <% categories.forEach((category) => { %>
+            <option value="<%= category.id %>"><%= category.name %></option>
+            <% }) %></select
+          ><br />
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="number" id="price" name="price" min="1" required /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="1" required /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="dateAdded">Date Added:</label>
+          <input type="date" id="dateAdded" name="dateAdded" required /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea
+          ><br />
+        </div>
+        <div class="buttons">
+          <button type="submit" value="Adaugă Jucărie">Add toy</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
