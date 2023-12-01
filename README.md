@@ -1,1 +1,1 @@
-
+Mi-ar fi placut sa lucrez mai mult la proiect, sa fie mult mai detaliat, mai complex
